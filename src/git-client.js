@@ -248,6 +248,10 @@ class GitClient {
         this.authenicateGithubWithToken(options.token);
         github.search.email({email: options.email}, callback);
     }
+	
+	exposeGithub() {
+        return github;
+    }
 }
 
 module.exports = GitClient;
