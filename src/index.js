@@ -29,6 +29,10 @@ class NodeGithubOAuth2 {
         gitClient = new GitClient(options);
     }
 
+    exposeGitClient() {
+        return gitClient;
+    }
+
     getRedirectURL(state) {
         if (!state) {
             return 'state is not present!';
